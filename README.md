@@ -1,10 +1,33 @@
 # bsides-cheltenham-2023-badge
 The Delorean badge for BSIDES Cheltenham 2023!
 
+We raised over £300 for Mind charity selling parts to complete these on the day!!!!
+
+## Bill Of Materials
+
+You can see a parts list on DigiKey [here](https://www.digikey.co.uk/en/mylists/list/DBJ9N5IB9O)
+
+Essentially its:
+
+* ATTINY402 microcontroller - any spec 402 will do
+* Button - any surface mount button fitting the footprint will work
+* CR2032 battery clip - surface mount not through hole
+* Neopixel addressable LED - Definitely get the right version of these
+* Any 3528 Blue LED will work for the bumper rail
+
+## Eagle designs and ordering your own badge
+
+We've uploaded the AutoCAD EAGLE schematic, board design and custom footprints so you can make your own variants!  You will probably have to do some tweaks to get it working as they're designed to be standalone exports.
+
+We've also uploaded the gerber_files.zip.  Take this to JLCPCB and you can order your own exact copies of the board :)
+
+## Writing and flashing code!
 
 We use [MegaTinyCore](https://github.com/SpenceKonde/megaTinyCore) for the arduino interface for ATTINY4x2 chips.
 
 Dev and flashing is done within the Arduino IDE ( < v2 ) using a jtag2updi interface, as discussed [here](https://github.com/SpenceKonde/AVR-Guidance/blob/master/UPDI/jtag2updi.md)
+
+We use [these little usb sticks](https://amzn.eu/d/c0lx0wG), with a 4.7k resistor soldered between the Tx and Rx lines.  
 
 ### Installing MegaTinyCore dependencies
 
